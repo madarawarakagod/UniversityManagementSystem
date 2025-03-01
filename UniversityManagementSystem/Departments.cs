@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace UniversityManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class Departments : Form
     {
-        public Form1()
+        public Departments()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
