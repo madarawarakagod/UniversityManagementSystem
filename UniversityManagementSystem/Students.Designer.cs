@@ -59,7 +59,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -71,6 +70,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -343,39 +350,36 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1271, 202);
+            this.textBox4.Location = new System.Drawing.Point(1383, 194);
+            this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 26);
+            this.textBox4.Size = new System.Drawing.Size(196, 40);
             this.textBox4.TabIndex = 56;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(1038, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 26);
-            this.textBox3.TabIndex = 55;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(804, 204);
+            this.textBox2.Location = new System.Drawing.Point(969, 194);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 26);
+            this.textBox2.Size = new System.Drawing.Size(187, 130);
             this.textBox2.TabIndex = 54;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(399, 204);
+            this.textBox1.Location = new System.Drawing.Point(330, 194);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 26);
+            this.textBox1.Size = new System.Drawing.Size(196, 40);
             this.textBox1.TabIndex = 53;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(344, 344);
+            this.panel6.Location = new System.Drawing.Point(345, 478);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1450, 7);
             this.panel6.TabIndex = 48;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // guna2Button2
             // 
@@ -392,7 +396,7 @@
             this.guna2Button2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2Button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.guna2Button2.Location = new System.Drawing.Point(836, 269);
+            this.guna2Button2.Location = new System.Drawing.Point(858, 394);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.DeepPink;
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
@@ -414,7 +418,7 @@
             this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2Button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.guna2Button1.Location = new System.Drawing.Point(586, 269);
+            this.guna2Button1.Location = new System.Drawing.Point(598, 394);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.HotPink;
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
@@ -436,7 +440,7 @@
             this.guna2Button3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2Button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.guna2Button3.Location = new System.Drawing.Point(1076, 269);
+            this.guna2Button3.Location = new System.Drawing.Point(1088, 394);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.PressedColor = System.Drawing.Color.DeepPink;
             this.guna2Button3.Size = new System.Drawing.Size(180, 45);
@@ -447,7 +451,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ItemHeight = 20;
-            this.comboBox1.Location = new System.Drawing.Point(622, 202);
+            this.comboBox1.Location = new System.Drawing.Point(792, 194);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 28);
             this.comboBox1.TabIndex = 52;
@@ -457,53 +461,138 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
-            this.label11.Location = new System.Drawing.Point(1265, 146);
+            this.label11.Location = new System.Drawing.Point(1377, 146);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 32);
+            this.label11.Size = new System.Drawing.Size(123, 32);
             this.label11.TabIndex = 44;
-            this.label11.Text = "Fees";
+            this.label11.Text = "Dep Name";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
-            this.label10.Location = new System.Drawing.Point(1032, 146);
+            this.label10.Location = new System.Drawing.Point(1182, 146);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 32);
+            this.label10.Size = new System.Drawing.Size(89, 32);
             this.label10.TabIndex = 45;
-            this.label10.Text = "Intake";
+            this.label10.Text = "Dep Id";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
-            this.label22.Location = new System.Drawing.Point(798, 148);
+            this.label22.Location = new System.Drawing.Point(963, 146);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(134, 32);
+            this.label22.Size = new System.Drawing.Size(101, 32);
             this.label22.TabIndex = 46;
-            this.label22.Text = "HOD Name";
+            this.label22.Text = "Address";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
-            this.label21.Location = new System.Drawing.Point(393, 148);
+            this.label21.Location = new System.Drawing.Point(324, 146);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(207, 32);
+            this.label21.Size = new System.Drawing.Size(97, 32);
             this.label21.TabIndex = 47;
-            this.label21.Text = "Department Name";
+            this.label21.Text = "Student";
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.MediumVioletRed;
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(566, 194);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
+            this.guna2DateTimePicker1.TabIndex = 57;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 3, 4, 0, 2, 2, 899);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
+            this.label12.Location = new System.Drawing.Point(796, 146);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 32);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Gender";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
+            this.label13.Location = new System.Drawing.Point(560, 146);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 32);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "DOB";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1188, 194);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(158, 28);
+            this.comboBox2.TabIndex = 58;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
+            this.label14.Location = new System.Drawing.Point(324, 257);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 32);
+            this.label14.TabIndex = 47;
+            this.label14.Text = "Phone";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(330, 305);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(196, 40);
+            this.textBox3.TabIndex = 53;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
+            this.label15.Location = new System.Drawing.Point(560, 261);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(114, 32);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Semester";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(566, 309);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(158, 28);
+            this.comboBox3.TabIndex = 58;
             // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1614, 1050);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.guna2Button2);
@@ -511,8 +600,12 @@
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label22);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label20);
@@ -586,7 +679,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel6;
@@ -598,5 +690,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
