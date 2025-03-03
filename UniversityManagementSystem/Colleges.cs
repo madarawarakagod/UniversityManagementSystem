@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace UniversityManagementSystem
 {
-    public partial class Courses : Form
+    public partial class Colleges : Form
     {
-        public Courses()
+        public Colleges()
         {
             InitializeComponent();
-        }
-
-        private void Courses_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
