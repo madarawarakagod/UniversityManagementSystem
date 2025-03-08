@@ -16,7 +16,7 @@ namespace UniversityManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Fees());
+            Application.Run(new Departments());
         }
     }
 }
