@@ -279,9 +279,9 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(100, 722);
+            this.panel7.Location = new System.Drawing.Point(99, 565);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(99, 5);
+            this.panel7.Size = new System.Drawing.Size(69, 5);
             this.panel7.TabIndex = 148;
             // 
             // label20
@@ -848,6 +848,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Fees";
             this.Text = "Fees";
+            this.Load += new System.EventHandler(this.Fees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

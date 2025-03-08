@@ -21,5 +21,10 @@ namespace UniversityManagementSystem
         {
 
         }
+
+        private void Fees_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
