@@ -402,6 +402,7 @@
             this.DeleteBtn.Size = new System.Drawing.Size(180, 45);
             this.DeleteBtn.TabIndex = 35;
             this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // SaveBtn
             // 
@@ -447,6 +448,7 @@
             this.EditBtn.Size = new System.Drawing.Size(180, 45);
             this.EditBtn.TabIndex = 35;
             this.EditBtn.Text = "Edit";
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // panel6
             // 
@@ -458,13 +460,14 @@
             // 
             // DepDGV
             // 
+            this.DepDGV.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.DepDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DepDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -479,10 +482,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DepDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.DepDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DepDGV.Location = new System.Drawing.Point(348, 443);
+            this.DepDGV.Location = new System.Drawing.Point(348, 426);
             this.DepDGV.Name = "DepDGV";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -491,12 +494,14 @@
             this.DepDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DepDGV.RowHeadersVisible = false;
             this.DepDGV.RowHeadersWidth = 62;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Thistle;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.GhostWhite;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.DepDGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DepDGV.RowTemplate.Height = 28;
+            this.DepDGV.RowTemplate.ReadOnly = true;
             this.DepDGV.Size = new System.Drawing.Size(1408, 472);
             this.DepDGV.TabIndex = 39;
             this.DepDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -520,6 +525,7 @@
             this.DepDGV.ThemeStyle.RowsStyle.Height = 28;
             this.DepDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DepDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DepDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DepDGV_CellContentClick);
             // 
             // DepNameTb
             // 

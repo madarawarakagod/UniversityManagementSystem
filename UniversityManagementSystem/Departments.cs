@@ -55,7 +55,7 @@ namespace UniversityManagementSystem
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (DepNameTb.Text=="" || DepIntakeTb.Text=="" || DepFeesTb.Text=="")
+            if (DepNameTb.Text == "" || DepIntakeTb.Text == "" || DepFeesTb.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -77,7 +77,85 @@ namespace UniversityManagementSystem
 
 
                 }
-                catch(Exception Ex)
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+        int Key = 0;
+        private void DepDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DepNameTb.Text = DepDGV.SelectedRows[0].Cells[1].Value.ToString();
+            DepIntakeTb.Text = DepDGV.SelectedRows[0].Cells[2].Value.ToString();
+            DepFeesTb.Text = DepDGV.SelectedRows[0].Cells[3].Value.ToString();
+            if (DepNameTb.Text == "")
+            {
+                Key = 0;
+                /*
+                 DpNameTb.Text="";
+                 DpFeesTb.Text="";
+                DepIntakeTb.Text="";
+                 */
+
+            }
+            else
+            {
+                Key = Convert.ToInt32(DepDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (DepNameTb.Text == "" || DepIntakeTb.Text == "" || DepFeesTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("Update DepartmentTbl Set DepName=@DN,DepIntake=@DI,DepFees=@DF where DepNum=@DKey", Con);
+                    cmd.Parameters.AddWithValue("@DN", DepNameTb.Text);
+                    cmd.Parameters.AddWithValue("@DI", DepIntakeTb.Text);
+                    cmd.Parameters.AddWithValue("@DF", DepFeesTb.Text);
+                    cmd.Parameters.AddWithValue("@DKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Department Updated");
+                    Con.Close();
+                    ShowDep();
+                    Reset();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (Key==0)
+            {
+                MessageBox.Show("Select The Department");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("Delete from DepartmentTbl where DepNum=@DKey", Con);
+                    cmd.Parameters.AddWithValue("@DKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Department Deleted");
+                    Con.Close();
+                    ShowDep();
+                    Reset();
+
+                }
+                catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message);
                 }
